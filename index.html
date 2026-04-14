@@ -1,0 +1,279 @@
+<html>
+
+<head>
+  <title>RepFlow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #facc15;
+      background-color: #000;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #facc15;
+      text-align: center;
+      padding: 20px 20px 10px;
+      border-bottom: 3px solid #facc15;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 8px 14px;
+      border: 2px solid #facc15;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: #facc15;
+      color: #000;
+    }
+
+    .video-background {
+      padding: 0px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+
+    .dark-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    .hero-banner {
+      text-align: center;
+      padding: 380px 20px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-banner h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #facc15;
+    }
+
+    .hero-banner p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      color: #facc15;
+    }
+
+    .cta-btn {
+      background: #facc15;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #fff200;
+    }
+
+    .features-banner {
+      padding: 150px 20px 20px;
+      text-align: center;
+      color: #facc15;
+      position: relative;
+      z-index: 1;
+    }
+
+    .features-banner h3 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .feature {
+      background-color: #1c1c1c;
+      border: 1px solid #333;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 0.95rem;
+      color: #d4d4d4;
+    }
+
+    footer {
+      background: #0a0a0a;
+      color: #facc15;
+      padding: 50px 20px;
+      border-top: 3px solid #facc15;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <video class="video-background" autoplay muted loop playsinline>
+    <source src="images and videos/homeentry.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="dark-overlay"></div>
+
+  <header>
+    <h1>RepFlow</h1>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="diet.html">Diet</a>
+      <a href="macroscalcpage.html">Macros & workouts</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="aboutus.html">About Us</a>
+    </div>
+  </header>
+
+
+  <div class="hero-banner">
+    <h2>Crush Your Goals With Precision</h2>
+    <p>Personalized macros, curated workouts, and real-time support. Your journey starts now.</p>
+    <a href="macroscalcpage.html" class="cta-btn">Get Started</a>
+  </div>
+
+
+  <div class="features-banner">
+    <h3>What RepFlow Brings You</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <h4>💪 Smart Workout Plans</h4>
+        <p>Get custom routines designed to match your fitness goals and track progress effortlessly.</p>
+      </div>
+      <div class="feature">
+        <h4>🍽️ Tailored Diet Plans</h4>
+        <p>Built around your calorie and macro needs — no more guessing or generic advice.</p>
+      </div>
+      <div class="feature">
+        <h4>📊 Macro Tracking</h4>
+        <p>Know exactly what you’re putting into your body with our accurate, easy-to-use macro tracker.</p>
+      </div>
+      <div class="feature">
+        <h4>🎓 Expert Tutorials</h4>
+        <p>Step-by-step guides on exercise form, nutrition strategy, and supplement science.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div
+      style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+      <div>
+        <h3 style="margin-bottom: 15px;">RepFlow</h3>
+        <p style="color: #d4d4d4; line-height: 1.6;">
+          RepFlow empowers fitness journeys through data-driven nutrition, personalized plans, and practical guidance.
+          Whether you're bulking, cutting, or maintaining — we’ve got your reps and macros covered.
+        </p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 12px;">Contact Us</h4>
+        <p style="color: #d4d4d4; margin: 6px 0;">📧 Email: <a href="mailto:support@repflow.fit"
+            style="color: #facc15; text-decoration: underline;">support@repflow.fit</a></p>
+        <p style="color: #d4d4d4; margin: 6px 0;">📍 Location: Pune, India</p>
+        <p style="color: #d4d4d4; margin: 6px 0;">📞 Phone: +91-9876543210</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 12px;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; color: #d4d4d4;">
+          <li><a href="index.html" style="color: #facc15; text-decoration: none;">🏠 Home</a></li>
+          <li><a href="diet.html" style="color: #facc15; text-decoration: none;">🥗 Diet Plans</a></li>
+          <li><a href="macroscalcpage.html" style="color: #facc15; text-decoration: none;">⚙️ Macro Calculator</a></li>
+          <li><a href="tutorials.html" style="color: #facc15; text-decoration: none;">🎥 Tutorials</a></li>
+          <li><a href="aboutus.html" style="color: #facc15; text-decoration: none;">📖 About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 12px;">Stay Connected</h4>
+        <p style="color: #d4d4d4;">Follow us on social media:</p>
+        <div style="display: flex; gap: 15px; margin-top: 10px;">
+          <a href="https://www.youtube.com/@repflow" target="_blank">
+            <img src="images and videos/youtubeicon.jpg" alt="YouTube" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://www.facebook.com/repflow" target="_blank">
+            <img src="images and videos/facebookicon.jpg" alt="Facebook" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://www.instagram.com/repflow" target="_blank">
+            <img src="images and videos/instaicon.jpg" alt="Instagram" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://twitter.com/repflow" target="_blank">
+            <img src="images and videos/xicon.jpg" alt="X (Twitter)" style="width: 32px; height: 32px;">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 40px; font-size: 0.9rem; color: #999;">
+      &copy; 2025 RepFlow. Made with 💪 for every rep that counts.
+    </div>
+  </footer>
+
+</body>
+
+</html>

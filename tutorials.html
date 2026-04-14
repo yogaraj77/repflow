@@ -1,0 +1,541 @@
+<html>
+
+<head>
+  <title>RepFlow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background: #000;
+      color: #facc15;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #facc15;
+      text-align: center;
+      padding: 20px 20px 10px;
+      border-bottom: 3px solid #facc15;
+      z-index: 1000;
+    }
+
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 8px 14px;
+      border: 2px solid #facc15;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background: #facc15;
+      color: #000;
+    }
+
+    .nav-links a.active {
+      background: #facc15;
+      color: #000;
+    }
+
+    main {
+      padding: 200px 20px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #facc15;
+      padding-bottom: 10px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .video-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 2px solid #facc15;
+      border-radius: 10px;
+    }
+
+    img {
+      border: 3px solid #facc15;
+      border-radius: 12px;
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .video-card p {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+    /* Category subheads inside upper body mega-section */
+    .subgroup {
+      margin-top: 40px;
+    }
+
+    .subgroup h3 {
+      margin: 0 0 16px;
+      font-size: 1.4rem;
+      border-bottom: 1px dashed #facc15;
+      padding-bottom: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>RepFlow</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="diet.html">Diet</a>
+      <a href="macroscalcpage.html">Macros & workouts</a>
+      <a href="tutorials.html" class="active">Tutorials</a>
+      <a href="aboutus.html">About Us</a>
+    </div>
+  </header>
+
+  <main>
+
+
+    <section style="text-align: center;">
+      <h2>Target Muscle Groups</h2>
+      <img src="images and videos/musclechart.jpg" alt="Body Muscle Diagram">
+    </section>
+
+
+    <section>
+      <h2>🧘 Stretching Workouts</h2>
+      <div class="video-grid">
+        <div>
+          <iframe src="https://www.youtube.com/embed/RStIKTfD874" frameborder="0" allowfullscreen
+            loading="lazy"></iframe>
+          <p>Leg Swings – Dynamic Stretch</p>
+        </div>
+        <div>
+          <iframe src="https://www.youtube.com/embed/mwDgFY86zck" frameborder="0" allowfullscreen
+            loading="lazy"></iframe>
+          <p>Arm Circles – Warm-Up Routine</p>
+        </div>
+        <div>
+          <iframe src="https://www.youtube.com/embed/h6XyzlM8m24" frameborder="0" allowfullscreen
+            loading="lazy"></iframe>
+          <p>Torso Twists – Proper Form</p>
+        </div>
+        <div>
+          <iframe src="https://www.youtube.com/embed/Lo4cCQ2HfzA" frameborder="0" allowfullscreen
+            loading="lazy"></iframe>
+          <p>Walking Lunges Warm-Up</p>
+        </div>
+        <div>
+          <iframe src="https://www.youtube.com/embed/FX8X2S2d9Ww" frameborder="0" allowfullscreen
+            loading="lazy"></iframe>
+          <p>High Knees Warm-Up</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <h2>💪 Upper Body Workouts</h2>
+
+
+      <div class="subgroup" id="ub-pressing">
+        <h3>Pressing (Chest & Shoulders)</h3>
+        <div class="video-grid">
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/SHsUIZiNdeY" title="Dumbbell Bench Press" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Dumbbell Bench Press</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/vlFGTI5JzjI" title="Shoulder Press (DB)" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Shoulder Press</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/KtP2eBiEdJ4" title="Lateral Raises" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Lateral Raises</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/AbLcwcl0TUY" title="Incline Dumbbell Press" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Incline Dumbbell Press</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/H60A3ev7pr0" title="Flat Dumbbell Press Tips" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Flat Dumbbell Press</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/snFvEucPkGw" title="Barbell Bench Press" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Barbell Bench Press</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/_RlRDWO2jfg" title="Overhead Barbell Press" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Overhead Press</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/KyTAraGimfE" title="Arnold Press" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Arnold Press</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/dTwa2piwU-A" title="Cable Lateral Raise" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Cable Lateral Raise</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/JJitfZKlKk4" title="Pec Deck Machine" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Pec Deck</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="subgroup" id="ub-pulling">
+        <h3>Pulling (Back)</h3>
+        <div class="video-grid">
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/OcFCHdQHjVU" title="Lat Pulldown" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Lat Pulldown</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/7o2oolbmzeI" title="Seated Cable Row" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Seated Rows</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/roCP6wCXPqo" title="Deadlift Technique" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Dumbell Row</p>
+          </div>
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/r4MzxtBKyNE" title="Deadlift Technique" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Deadlift</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/eGo4IYlbE5g" title="Pull Ups" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Pull Ups</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Nqh7q3zDCoQ" title="Barbell Rows" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Barbell Rows</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/liG8_rbhUtM" title="T-Bar Rows" loading="lazy"
+              allowfullscreen></iframe>
+            <p>T-Bar Rows</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/GKhyUBQL5Ag" title="Rear Delt Flys (Mind Pump)" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Rear Delt Flys</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="subgroup" id="ub-arms">
+        <h3>Arms (Biceps & Triceps)</h3>
+        <div class="video-grid">
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ykJmrZ5v0Oo" title="Bicep Curls" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Bicep Curls</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/zC3nLlEvin4" title="Hammer Curls" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Hammer Curls</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/CnBmiBqp-AI" title="Rope Pushdown" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Rope Pushdown (Triceps)</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/0326dy_-CzM" title="Triceps Dips" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Triceps Dips</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/wKEONiKiNCk" title="Overhead Triceps Extension" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Overhead Extension</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/kwG2ipFRgfo" title="Barbell Curls" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Barbell Curls</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/vj2w851ZHRM" title="Face Pulls" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Face Pulls</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/cJRVVxmytaM" title="Shrugs" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Shrugs</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/d_KZxkY_0cM" title="Skull Crushers" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Skull Crushers</p>
+          </div>
+        </div>
+
+
+
+        <div class="subgroup" id="ub-core">
+          <h3>Core & Accessory</h3>
+          <div class="video-grid">
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/pSHjTRCQxIw" title="Plank" loading="lazy"
+                allowfullscreen></iframe>
+              <p>Plank</p>
+            </div>
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/wkD8rjkodUI" title="Russian Twists" loading="lazy"
+                allowfullscreen></iframe>
+              <p>Russian Twists</p>
+            </div>
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/ph3pddpKzzw" title="Back Extension" loading="lazy"
+                allowfullscreen></iframe>
+              <p>Back Extension</p>
+            </div>
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/EYe6dc_i4L0" title="Hanging Leg Raises" loading="lazy"
+                allowfullscreen></iframe>
+              <p>Hanging Leg Raises</p>
+            </div>
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/H88Ip-MUWn0" title="Weighted Plank" loading="lazy"
+                allowfullscreen></iframe>
+              <p>Weighted Plank</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    >
+    <section>
+      <h2>🦵 Lower Body Workouts</h2>
+      <div class="subgroup" id="ub-pressing">
+        <div class="video-grid">
+
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/W4VYCYNYNSw" title="Leaned-Forward Seated Leg Curl"
+              loading="lazy" allowfullscreen></iframe>
+            <p>Seated Leg Curl – Leaned-Forward Variation</p>
+          </div>
+
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/mF5tnEBrdkc" title="Goblet Squat Tutorial" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Goblet Squat – Proper Form</p>
+          </div>
+
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/YyvSfVjQeL0" title="Seated Leg Extensions" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Seated Leg Extensions</p>
+          </div>
+
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/F488k67BTNo" title="Lying Hamstring Curl Machine" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Lying Hamstring Curl – Machine Demo</p>
+          </div>
+
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/IZxyjW7MPJQ" title="Leg Press Exercise" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Leg Press – Machine Demo</p>
+          </div>
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/QOVaHwm-Q6U" title="Dumbbell Lunges Tutorial" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Weighted Lunges – Dumbbell Variation</p>
+          </div>
+
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/1xMaFs0L3ao" title="Dumbbell Goblet Squat" loading="lazy"
+              allowfullscreen></iframe>
+            <p>Weighted Squats – Goblet Style</p>
+          </div>
+
+
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/-qsRtp_PbVM" title="Seated Calf Raise Machine Tutorial"
+              loading="lazy" allowfullscreen></iframe>
+            <p>Machine Calf Raises</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <h2>🏃‍♀️ Cardio Workouts</h2>
+      <div class="video-grid">
+
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/nGaXj3kkmrU" title="Jumping Jacks Tutorial" loading="lazy"
+            allowfullscreen></iframe>
+          <p>Jumping Jacks – Full Body Warm-Up</p>
+        </div>
+
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/nmwgirgXLYM" title="Mountain Climbers Exercise" loading="lazy"
+            allowfullscreen></iframe>
+          <p>Mountain Climbers – Core & Cardio</p>
+        </div>
+
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/TU8QYVW0gDU" title="Burpee Tutorial" loading="lazy"
+            allowfullscreen></iframe>
+          <p>Burpees – Full Body Fat Burner</p>
+        </div>
+
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/Jx2KXGbQkYM" title="Skaters Cardio Exercise" loading="lazy"
+            allowfullscreen></iframe>
+          <p>Skaters – Lateral Cardio Movement</p>
+        </div>
+
+
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/oMW59TKZvaI" title="Butt Kicks Tutorial" loading="lazy"
+            allowfullscreen></iframe>
+          <p>Butt Kicks – Light Impact Cardio</p>
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer style="background: #0a0a0a; color: #facc15; padding: 50px 20px; border-top: 3px solid #facc15;">
+    <div
+      style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+      <div>
+        <h3 style="margin-bottom: 15px;">RepFlow</h3>
+        <p style="color: #d4d4d4; line-height: 1.6;">
+          RepFlow empowers fitness journeys through data-driven nutrition, personalized plans, and practical guidance.
+          Whether you're bulking, cutting, or maintaining — we’ve got your reps and macros covered.
+        </p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 12px;">Contact Us</h4>
+        <p style="color: #d4d4d4; margin: 6px 0;">📧 Email: <a href="mailto:support@repflow.fit"
+            style="color: #facc15; text-decoration: underline;">support@repflow.fit</a></p>
+        <p style="color: #d4d4d4; margin: 6px 0;">📍 Location: Pune, India</p>
+        <p style="color: #d4d4d4; margin: 6px 0;">📞 Phone: +91-9876543210</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 12px;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; color: #d4d4d4;">
+          <li><a href="index.html" style="color: #facc15; text-decoration: none;">🏠 Home</a></li>
+          <li><a href="diet.html" style="color: #facc15; text-decoration: none;">🥗 Diet Plans</a></li>
+          <li><a href="macroscalcpage.html" style="color: #facc15; text-decoration: none;">⚙️ Macro Calculator</a></li>
+          <li><a href="tutorials.html" style="color: #facc15; text-decoration: none;">🎥 Tutorials</a></li>
+          <li><a href="aboutus.html" style="color: #facc15; text-decoration: none;">📖 About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 12px;">Stay Connected</h4>
+        <p style="color: #d4d4d4;">Follow us on social media:</p>
+        <div style="display: flex; gap: 15px; margin-top: 10px;">
+          <a href="https://www.youtube.com/@repflow" target="_blank">
+            <img src="images and videos/youtubeicon.jpg" alt="YouTube" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://www.facebook.com/repflow" target="_blank">
+            <img src="images and videos/facebookicon.jpg" alt="Facebook" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://www.instagram.com/repflow" target="_blank">
+            <img src="images and videos/instaicon.jpg" alt="Instagram" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://twitter.com/repflow" target="_blank">
+            <img src="images and videos/xicon.jpg" alt="X (Twitter)" style="width: 32px; height: 32px;">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; font-size: 0.9rem; color: #999;">
+      &copy; 2025 RepFlow. Made with 💪 for every rep that counts.
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,560 @@
+<html>
+
+<head>
+  <title>RepFlow – Track and Transform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background: #000;
+      color: #facc15;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #facc15;
+      text-align: center;
+      padding: 20px 20px 10px;
+      border-bottom: 3px solid #facc15;
+      z-index: 1000;
+    }
+
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 8px 14px;
+      border: 2px solid #facc15;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background: #facc15;
+      color: #000;
+    }
+
+
+    .nav-links a.active {
+      background: #facc15;
+      color: #000;
+    }
+
+    .subheading {
+      padding: 200px 20px 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #facc15;
+      margin-top: 30px;
+    }
+
+    .review {
+      max-width: 1200px;
+      margin: 20px auto 40px;
+      padding: 0 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.8rem;
+    }
+
+    .neon-box {
+      max-width: 500px;
+      margin: 0 auto 40px;
+      background: #111;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #facc15, 0 0 30px #facc15 inset;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 96%;
+      padding: 10px;
+      margin-top: 5px;
+      background: #000;
+      color: #facc15;
+      border: 1px solid #333;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 20px;
+      background: #facc15;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #eab308;
+    }
+
+    .calorie-options {
+      display: none;
+    }
+
+    .goal-heading {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 60px;
+      color: #facc15;
+      text-transform: uppercase;
+    }
+
+    .plain-result {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      color: #e7e7e7;
+      text-align: left;
+    }
+
+    .plain-result p {
+      margin: 12px 0;
+    }
+
+    .plain-result strong {
+      font-weight: bold;
+      color: #facc15;
+      font-size: 1.3rem;
+    }
+
+    .thank-you {
+      text-align: center;
+      margin: 50px 20px;
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+
+    .workout-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 20px;
+    }
+
+    .workout-card {
+      flex: 1 1 300px;
+      background: #111;
+      box-shadow: 0 0 12px #facc15, 0 0 25px #facc15 inset;
+      padding: 20px;
+      border-radius: 20px;
+      color: #e7e7e7;
+      text-align: left;
+      max-width: 350px;
+    }
+
+    .workout-card strong {
+      color: #facc15;
+      font-size: 1.2rem;
+    }
+
+    hr {
+      margin: 60px auto;
+      border: 1px solid #facc15;
+      width: 100%;
+    }
+
+    .simple-form {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #e7e7e7;
+      font-size: 1.1rem;
+    }
+
+    .simple-form h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #facc15;
+    }
+
+    .tutorial-link {
+      text-align: center;
+      margin: 60px auto;
+    }
+
+    .tutorial-link a {
+      background-color: #facc15;
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .tutorial-link a:hover {
+      background-color: #eab308;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>RepFlow</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="diet.html">Diet</a>
+      <a href="macroscalcpage.html" class="active">Macros & workouts</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="aboutus.html">About Us</a>
+    </div>
+
+  </header>
+
+  <div class="subheading">Track and Transform</div>
+
+  <div class="review">
+    <strong>
+      Your body is your greatest project, and RepFlow is the blueprint. <br>
+      Track your progress, set your goal, and fuel yourself with precision. <br>
+      Whether you're gaining muscle or cutting fat, we calculate it right. <br>
+      Simple inputs, powerful results — fitness made personal.
+    </strong>
+  </div>
+
+  <div class="neon-box">
+    <label for="age">Enter Age:</label>
+    <input type="number" id="age" placeholder="e.g. 25">
+
+    <label for="weight">Enter Weight (kg):</label>
+    <input type="number" id="weight" placeholder="e.g. 70">
+
+    <label for="goal">Choose Your Goal:</label>
+    <select id="goal" onchange="toggleCalorieOptions()">
+      <option value="">--Select--</option>
+      <option value="gain">Weight Gain</option>
+      <option value="loss">Weight Loss</option>
+    </select>
+
+    <div class="calorie-options" id="calorieOptions">
+      <label for="caloriePlan" id="calorieLabel"></label>
+      <select id="caloriePlan"></select>
+    </div>
+
+    <button onclick="calculatePlan()">Get My Plan</button>
+  </div>
+
+  <div id="goalHeading" class="goal-heading"></div>
+
+  <div id="resultContainer" class="result">
+    <div id="resultBox" class="plain-result"></div>
+  </div>
+  <hr>
+
+  <div class="goal-heading">Beginner Workout Plan</div>
+  <div class="workout-row">
+    <div class="workout-card">
+      <strong>Day 1: Push + Legs</strong>
+      <p>• Squats – 3×10–12</p>
+      <p>• Dumbbell Bench Press – 3×8–10</p>
+      <p>• Shoulder Press – 3×10</p>
+      <p>• Seated Leg Curl – 3×12</p>
+      <p>• Lateral Raises – 3×15</p>
+      <p><em>Optional: 10–15 min cardio</em></p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 3: Pull + Core</strong>
+      <p>• Lat Pulldown – 3×10</p>
+      <p>• Row Machine – 3×10</p>
+      <p>• Bicep Curls – 3×12</p>
+      <p>• Back Extensions – 3×12–15</p>
+      <p>• Plank – 3×45 sec</p>
+      <p>• Russian Twists – 3×15/side</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 5: Balanced Full Body</strong>
+      <p>• Goblet Squats – 3×10</p>
+      <p>• Incline DB Press – 3×10</p>
+      <p>• DB Row – 3×10/side</p>
+      <p>• Deadlift – 3×8</p>
+      <p>• Rope Pushdowns – 3×12</p>
+      <p>• Bicycle Crunches – 3×15</p>
+    </div>
+  </div>
+  <div class="thank-you"><strong>Rest on Day 2 & 4 – Recovery is key!</strong></div>
+  <hr>
+
+  <div class="goal-heading">Intermediate Workout Plan</div>
+  <div class="workout-row">
+    <div class="workout-card">
+      <strong>Day 1: Upper Body Strength</strong>
+      <p>• Barbell Bench Press – 4×6</p>
+      <p>• Pull-Ups – 4×8</p>
+      <p>• Barbell Rows – 4×8</p>
+      <p>• Overhead Press – 3×10</p>
+      <p>• Hammer Curls – 3×12</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 2: Lower Body Strength</strong>
+      <p>• Barbell Squats – 4×6</p>
+      <p>• Romanian Deadlift – 4×8</p>
+      <p>• Walking Lunges – 3×12/leg</p>
+      <p>• Leg Extensions – 3×15</p>
+      <p>• Calf Raises – 3×20</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 4: Push Hypertrophy</strong>
+      <p>• Incline DB Press – 4×10</p>
+      <p>• Arnold Press – 3×12</p>
+      <p>• Triceps Dips – 3×10</p>
+      <p>• Cable Flys – 3×15</p>
+      <p>• Overhead Extensions – 3×15</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 5: Pull Hypertrophy</strong>
+      <p>• Lat Pulldown – 4×12</p>
+      <p>• Seated Row – 3×12</p>
+      <p>• Barbell Curls – 3×10</p>
+      <p>• Face Pulls – 3×15</p>
+      <p>• Shrugs – 3×15</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 6: Glutes & Core</strong>
+      <p>• Hip Thrusts – 4×10</p>
+      <p>• Bulgarian Split Squats – 3×12</p>
+      <p>• Cable Kickbacks – 3×15</p>
+      <p>• Hanging Leg Raises – 3×12</p>
+      <p>• Weighted Plank – 3×30s</p>
+    </div>
+  </div>
+
+  <div class="thank-you"><strong>Day 3 & 7: Active Recovery / Stretch</strong></div>
+  <hr>
+
+  <div class="goal-heading">Advanced Workout Plan</div>
+  <div class="workout-row">
+    <div class="workout-card">
+      <strong>Day 1: Upper Strength</strong>
+      <p>• Weighted Pull-Ups – 4×6</p>
+      <p>• Incline Bench – 4×6</p>
+      <p>• Pendlay Rows – 4×8</p>
+      <p>• Military Press – 4×8</p>
+      <p>• Weighted Dips – 3×10</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 2: Lower Strength</strong>
+      <p>• Front Squats – 4×6</p>
+      <p>• Deadlifts – 4×5</p>
+      <p>• Glute Ham Raise – 3×10</p>
+      <p>• Walking Lunges – 3×12/leg</p>
+      <p>• Seated Calf Raise – 3×20</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 4: Push Volume</strong>
+      <p>• Flat DB Press – 4×12</p>
+      <p>• Cable Lateral Raise – 4×15</p>
+      <p>• Skull Crushers – 3×12</p>
+      <p>• DB Overhead Press – 3×10</p>
+      <p>• Pec Deck – 3×15</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 5: Pull Volume</strong>
+      <p>• Pull-Ups – 4×10</p>
+      <p>• T-Bar Rows – 4×10</p>
+      <p>• Incline DB Curls – 3×12</p>
+      <p>• Rear Delt Flys – 3×15</p>
+      <p>• EZ Bar Curls – 3×12</p>
+    </div>
+    <div class="workout-card">
+      <strong>Day 6: Athletic Conditioning</strong>
+      <p>• Sled Push – 5 rounds</p>
+      <p>• Box Jumps – 3×10</p>
+      <p>• Battle Ropes – 5×30 sec</p>
+      <p>• Kettlebell Swings – 3×20</p>
+      <p>• Core Circuit – 3 rounds</p>
+    </div>
+
+  </div>
+
+  <div class="thank-you"><strong>Day 3 & 7: Mobility or Total Rest</strong></div>
+  <div class="tutorial-link">
+    <a href="tutorials.html">Watch Workout Tutorials</a>
+  </div>
+  <hr>
+
+
+  <div class="simple-form">
+    <h2>Get Personalized Help</h2>
+    <form action="submit-form.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <br>
+    <br>
+  </div>
+
+
+
+  <script>
+
+    function toggleCalorieOptions() {
+      const goal = document.getElementById('goal').value;
+      const label = document.getElementById('calorieLabel');
+      const select = document.getElementById('caloriePlan');
+      const box = document.getElementById('calorieOptions');
+
+      select.innerHTML = '';
+      if (goal === 'gain') {
+        label.textContent = 'Choose Calorie Surplus:';
+        select.innerHTML = `
+        <option value="500">+500 Calories</option>
+        <option value="1000">+1000 Calories</option>
+      `;
+      } else if (goal === 'loss') {
+        label.textContent = 'Choose Calorie Deficit:';
+        select.innerHTML = `
+        <option value="-500">-500 Calories</option>
+        <option value="-900">-900 Calories</option>
+      `;
+      }
+      box.style.display = goal ? 'block' : 'none';
+    }
+
+    function calculatePlan() {
+      const weight = parseFloat(document.getElementById('weight').value);
+      const goal = document.getElementById('goal').value;
+      const adjustment = parseInt(document.getElementById('caloriePlan').value || 0);
+      const goalHeading = document.getElementById('goalHeading');
+      const resultBox = document.getElementById('resultBox');
+      const resultContainer = document.getElementById('resultContainer');
+
+      if (!weight || !goal || isNaN(adjustment)) {
+        goalHeading.textContent = "";
+        resultBox.innerHTML = "<b><center><p>Please fill all fields correctly.</p></center></b>";
+        resultContainer.classList.remove('neon-box');
+        return;
+      }
+
+      const maintenance = weight * 2.2 * 14; // quick est: lb * 14
+      const totalCalories = maintenance + adjustment;
+
+      const protein = Math.round((totalCalories * 0.3) / 4);
+      const fat = Math.round((totalCalories * 0.2) / 9);
+      const carbs = Math.round((totalCalories * 0.5) / 4);
+
+      goalHeading.textContent = goal === "gain" ? "Muscle Gain Plan" : "Fat Loss Plan";
+
+      resultBox.innerHTML = `
+      <p><strong>Maintenance Calories:</strong> ${Math.round(maintenance)} kcal/day</p>
+      <p><strong>Target Calories:</strong> ${Math.round(totalCalories)} kcal/day</p>
+      <p><strong>Protein:</strong> ${protein}g</p>
+      <p><strong>Fats:</strong> ${fat}g</p>
+      <p><strong>Carbohydrates:</strong> ${carbs}g</p>
+    `;
+
+      resultContainer.classList.add('neon-box');
+    }
+  </script>
+  <footer style="background: #0a0a0a; color: #facc15; padding: 50px 20px; border-top: 3px solid #facc15;">
+
+    <div
+      style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+
+
+      <div>
+        <h3 style="margin-bottom: 15px;">RepFlow</h3>
+        <p style="color: #d4d4d4; line-height: 1.6;">
+          RepFlow empowers fitness journeys through data-driven nutrition, personalized plans, and practical guidance.
+          Whether you're bulking, cutting, or maintaining — we’ve got your reps and macros covered.
+        </p>
+      </div>
+
+
+      <div>
+        <h4 style="margin-bottom: 12px;">Contact Us</h4>
+        <p style="color: #d4d4d4; margin: 6px 0;">📧 Email: <a href="mailto:support@repflow.fit"
+            style="color: #facc15; text-decoration: underline;">support@repflow.fit</a></p>
+        <p style="color: #d4d4d4; margin: 6px 0;">📍 Location: Pune, India</p>
+        <p style="color: #d4d4d4; margin: 6px 0;">📞 Phone: +91-9876543210</p>
+      </div>
+
+
+      <div>
+        <h4 style="margin-bottom: 12px;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; color: #d4d4d4;">
+          <li><a href="index.html" style="color: #facc15; text-decoration: none;">🏠 Home</a></li>
+          <li><a href="diet.html" style="color: #facc15; text-decoration: none;">🥗 Diet Plans</a></li>
+          <li><a href="macroscalcpage.html" style="color: #facc15; text-decoration: none;">⚙️ Macro Calculator</a></li>
+          <li><a href="tutorials.html" style="color: #facc15; text-decoration: none;">🎥 Tutorials</a></li>
+          <li><a href="aboutus.html" style="color: #facc15; text-decoration: none;">📖 About Us</a></li>
+        </ul>
+      </div>
+
+
+      <div>
+        <h4 style="margin-bottom: 12px;">Stay Connected</h4>
+        <p style="color: #d4d4d4;">Follow us on social media:</p>
+        <div style="display: flex; gap: 15px; margin-top: 10px;">
+          <a href="https://www.youtube.com/@repflow" target="_blank">
+            <img src="images and videos/youtubeicon.jpg" alt="YouTube" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://www.facebook.com/repflow" target="_blank">
+            <img src="images and videos/facebookicon.jpg" alt="Facebook" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://www.instagram.com/repflow" target="_blank">
+            <img src="images and videos/instaicon.jpg" alt="Instagram" style="width: 32px; height: 32px;">
+          </a>
+          <a href="https://twitter.com/repflow" target="_blank">
+            <img src="images and videos/xicon.jpg" alt="X (Twitter)" style="width: 32px; height: 32px;">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div style="text-align: center; margin-top: 40px; font-size: 0.9rem; color: #999;">
+      &copy; 2025 RepFlow. Made with 💪 for every rep that counts.
+    </div>
+  </footer>
+
+</body>
+
+</html>

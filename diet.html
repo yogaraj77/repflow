@@ -1,0 +1,415 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 10 Macro Foods</title>
+  <style>
+    body {
+      background: #000;
+      color: #facc15;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #facc15;
+      text-align: center;
+      padding: 20px 20px 10px;
+      border-bottom: 3px solid #facc15;
+      z-index: 1000;
+    }
+
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 8px 14px;
+      border: 2px solid #facc15;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: #facc15;
+      color: #000;
+    }
+
+    .category-heading {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2rem;
+      color: #facc15;
+      text-transform: uppercase;
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .food-item {
+      text-align: center;
+      color: #e7e7e7;
+      border: 2px solid #facc15;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 0 10px #facc15;
+    }
+
+    .food-item img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .macros {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .food-item h3 {
+      margin: 10px 0 5px;
+      font-size: 1.2rem;
+      color: #facc15;
+    }
+
+    .diet-info {
+      padding: 200px 20px 2px;
+    }
+
+    .diet-info p {
+
+      max-width: 900px;
+      margin: 30px auto;
+      text-align: center;
+      padding: 0 20px;
+      color: #e7e7e7;
+      font-size: 1.1rem;
+    }
+
+    .sample-diets {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .sample-diets h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .diet-plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .diet-box {
+      background-color: #111;
+      border: 2px solid #facc15;
+      padding: 20px;
+      border-radius: 12px;
+      color: #e7e7e7;
+    }
+
+    .diet-box h3 {
+      margin-top: 0;
+      color: #facc15;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+    }
+
+    footer {
+      background: #0a0a0a;
+      color: #facc15;
+      padding: 50px 20px;
+      border-top: 3px solid #facc15;
+    }
+
+    footer a {
+      color: #facc15;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>RepFlow</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="diet.html" class="active">Diet</a>
+      <a href="macroscalcpage.html">Macros & workouts</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="aboutus.html">About Us</a>
+    </div>
+  </header>
+
+  <section class="diet-info">
+    <p>
+      A well-balanced diet is essential for maintaining overall health, improving energy levels, and supporting bodily
+      functions.
+      Whether your goal is building muscle, losing fat, or simply feeling your best, proper nutrition plays a vital
+      role.
+      Take your diet seriously, and you'll see the benefits in both your physical and mental well-being.
+    </p>
+  </section>
+
+  <div class="category-heading">High Protein Foods</div>
+  <div class="food-grid" id="protein-foods">
+    <div class="food-item"><img src="images and videos/paneer.webp" alt="Paneer">
+      <h3>Paneer (per 100g)</h3>
+      <div class="macros">Calories: 265 kcal<br>Protein: 18g<br>Carbs: 1.2g<br>Fat: 20g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/moong.webp" alt="Moong Dal">
+      <h3>Moong Dal (per 100g cooked)</h3>
+      <div class="macros">Calories: 105 kcal<br>Protein: 7g<br>Carbs: 18g<br>Fat: 0.8g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/chickenbreast.jpg" alt="Chicken Breast">
+      <h3>Chicken Breast (per 100g)</h3>
+      <div class="macros">Calories: 165 kcal<br>Protein: 31g<br>Carbs: 0g<br>Fat: 3.6g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/eggs.avif" alt="Egg">
+      <h3>Egg (per large egg)</h3>
+      <div class="macros">Calories: 155 kcal<br>Protein: 13g<br>Carbs: 1.1g<br>Fat: 11g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/greekyogurt.jpg" alt="Greek Yogurt">
+      <h3>Greek Yogurt (per 100g)</h3>
+      <div class="macros">Calories: 59 kcal<br>Protein: 10g<br>Carbs: 3.6g<br>Fat: 0.4g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/tofu.jpg" alt="Tofu">
+      <h3>Tofu (per 100g)</h3>
+      <div class="macros">Calories: 144 kcal<br>Protein: 15g<br>Carbs: 3.9g<br>Fat: 8g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/rajma.webp" alt="Rajma">
+      <h3>Rajma (per 100g cooked)</h3>
+      <div class="macros">Calories: 127 kcal<br>Protein: 8.7g<br>Carbs: 22.8g<br>Fat: 0.5g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/fishcurry.jpg" alt="Fish Curry">
+      <h3>Fish Curry (per 100g)</h3>
+      <div class="macros">Calories: 150 kcal<br>Protein: 20g<br>Carbs: 4g<br>Fat: 6g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/green gram.webp" alt="Sprouted Green Gram">
+      <h3>Sprouted Green Gram (per 100g)</h3>
+      <div class="macros">Calories: 30 kcal<br>Protein: 3g<br>Carbs: 6g<br>Fat: 0.1g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/shrimp.jpg" alt="Shrimp">
+      <h3>Shrimp (per 100g)</h3>
+      <div class="macros">Calories: 99 kcal<br>Protein: 24g<br>Carbs: 0.2g<br>Fat: 0.3g</div>
+    </div>
+  </div>
+
+  <div class="category-heading">High Carbohydrate Foods</div>
+  <div class="food-grid" id="carb-foods">
+    <div class="food-item"><img src="images and videos/rice.jpg" alt="White Rice">
+      <h3>White Rice (per 100g)</h3>
+      <div class="macros">Calories: 130 kcal<br>Protein: 2.7g<br>Carbs: 28g<br>Fat: 0.3g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/chapati.jpg" alt="Chapati">
+      <h3>Chapati (1 medium)</h3>
+      <div class="macros">Calories: 104 kcal<br>Protein: 3g<br>Carbs: 15g<br>Fat: 3g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/banana.jpg" alt="Banana">
+      <h3>Banana (per medium)</h3>
+      <div class="macros">Calories: 105 kcal<br>Protein: 1.3g<br>Carbs: 27g<br>Fat: 0.3g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/poha.webp" alt="Poha">
+      <h3>Poha (per 100g)</h3>
+      <div class="macros">Calories: 180 kcal<br>Protein: 2.6g<br>Carbs: 30g<br>Fat: 5g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/sweet potato.jpg" alt="Sweet Potato">
+      <h3>Sweet Potato (per 100g)</h3>
+      <div class="macros">Calories: 86 kcal<br>Protein: 1.6g<br>Carbs: 20g<br>Fat: 0.1g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/idli.jpg" alt="Idli">
+      <h3>Idli (per piece)</h3>
+      <div class="macros">Calories: 39 kcal<br>Protein: 1.6g<br>Carbs: 7.4g<br>Fat: 0.2g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/oatss.webp" alt="Oats">
+      <h3>Oats (per 100g)</h3>
+      <div class="macros">Calories: 389 kcal<br>Protein: 17g<br>Carbs: 66g<br>Fat: 7g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/bread.jpg" alt="Bread">
+      <h3>Bread (1 slice)</h3>
+      <div class="macros">Calories: 66 kcal<br>Protein: 2g<br>Carbs: 12g<br>Fat: 1g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/apples.jpg" alt="Apple">
+      <h3>Apple (per medium)</h3>
+      <div class="macros">Calories: 95 kcal<br>Protein: 0.5g<br>Carbs: 25g<br>Fat: 0.3g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/corn.jpg" alt="Corn">
+      <h3>Corn (per 100g)</h3>
+      <div class="macros">Calories: 96 kcal<br>Protein: 3.4g<br>Carbs: 21g<br>Fat: 1.5g</div>
+    </div>
+  </div>
+
+  <div class="category-heading">Healthy Fat Foods</div>
+  <div class="food-grid" id="fat-foods">
+    <div class="food-item"><img src="images and videos/avacado.jpg" alt="Avocado">
+      <h3>Avocado (per 100g)</h3>
+      <div class="macros">Calories: 160 kcal<br>Protein: 2g<br>Carbs: 9g<br>Fat: 15g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/peanut butter.jpg" alt="Peanut Butter">
+      <h3>Peanut Butter (per tbsp)</h3>
+      <div class="macros">Calories: 94 kcal<br>Protein: 4g<br>Carbs: 3g<br>Fat: 8g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/almons.jpg" alt="Almonds">
+      <h3>Almonds (per 10 almonds)</h3>
+      <div class="macros">Calories: 70 kcal<br>Protein: 2.6g<br>Carbs: 2.5g<br>Fat: 6g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/ghee.jpg" alt="Ghee">
+      <h3>Ghee (per tbsp)</h3>
+      <div class="macros">Calories: 112 kcal<br>Protein: 0g<br>Carbs: 0g<br>Fat: 12.7g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/coconuts.jpg" alt="Coconut">
+      <h3>Coconut (per 100g)</h3>
+      <div class="macros">Calories: 354 kcal<br>Protein: 3.3g<br>Carbs: 15g<br>Fat: 33g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/walnuts.jpg" alt="Walnuts">
+      <h3>Walnuts (per 7 halves)</h3>
+      <div class="macros">Calories: 183 kcal<br>Protein: 4.3g<br>Carbs: 3.9g<br>Fat: 18g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/olive oil.jpg" alt="Olive Oil">
+      <h3>Olive Oil (per tbsp)</h3>
+      <div class="macros">Calories: 119 kcal<br>Protein: 0g<br>Carbs: 0g<br>Fat: 13.5g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/cashews.jpg" alt="Cashews">
+      <h3>Cashews (per 10)</h3>
+      <div class="macros">Calories: 98 kcal<br>Protein: 3.3g<br>Carbs: 5g<br>Fat: 8g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/cheese.webp" alt="Cheese">
+      <h3>Cheese (per 100g)</h3>
+      <div class="macros">Calories: 402 kcal<br>Protein: 25g<br>Carbs: 1.3g<br>Fat: 33g</div>
+    </div>
+    <div class="food-item"><img src="images and videos/dark chocolate.jpg" alt="Dark Chocolate">
+      <h3>Dark Chocolate (per 30g)</h3>
+      <div class="macros">Calories: 170 kcal<br>Protein: 2g<br>Carbs: 13g<br>Fat: 12g</div>
+    </div>
+  </div>
+
+
+  <section class="sample-diets">
+    <h2>🍱 Sample Diet Plans</h2>
+    <p style="text-align:center; color:#e7e7e7; margin-bottom: 30px;">Here are some sample diet plans. Customize them
+      based on your needs.</p>
+    <div class="diet-plans">
+      <div class="diet-box">
+        <h3>Plan 1</h3>
+        <ul>
+          <li>Meal 1: Paneer + Oats + Banana</li>
+          <li>Meal 2: Moong Dal + Chapati + Apple</li>
+          <li>Meal 3: Chicken Breast + Rice + Avocado</li>
+          <li>Meal 4: Greek Yogurt + Almonds + Dark Chocolate</li>
+        </ul>
+      </div>
+      <div class="diet-box">
+        <h3>Plan 2</h3>
+        <ul>
+          <li>Meal 1: Eggs + Bread + Coconut</li>
+          <li>Meal 2: Rajma + Sweet Potato + Cashews</li>
+          <li>Meal 3: Fish Curry + Poha + Olive Oil</li>
+          <li>Meal 4: Greek Yogurt + Walnuts + Apple</li>
+        </ul>
+      </div>
+      <div class="diet-box">
+        <h3>Plan 3</h3>
+        <ul>
+          <li>Meal 1: Tofu + Idli + Peanut Butter</li>
+          <li>Meal 2: Sprouted Green Gram + Rice + Ghee</li>
+          <li>Meal 3: Shrimp + Chapati + Cheese</li>
+          <li>Meal 4: Greek Yogurt + Banana + Almonds</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div
+      style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+      <div>
+        <h3>RepFlow</h3>
+        <p style="color: #d4d4d4;">RepFlow empowers fitness journeys through data-driven nutrition, personalized plans,
+          and practical guidance.</p>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <p style="color: #d4d4d4;">📧 <a href="mailto:support@repflow.fit">support@repflow.fit</a></p>
+        <p style="color: #d4d4d4;">📍 Pune, India</p>
+        <p style="color: #d4d4d4;">📞 +91-9876543210</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html">🏠 Home</a></li>
+          <li><a href="diet.html">🥗 Diet Plans</a></li>
+          <li><a href="macroscalcpage.html">⚙️ Macro Calculator</a></li>
+          <li><a href="tutorials.html">🎥 Tutorials</a></li>
+          <li><a href="aboutus.html">📖 About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay Connected</h4>
+        <p>Follow us on social media:</p>
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@repflow" target="_blank"><img src="images and videos/youtubeicon.jpg"
+              alt="YouTube"></a>
+          <a href="https://www.facebook.com/repflow" target="_blank"><img src="images and videos/facebookicon.jpg"
+              alt="Facebook"></a>
+          <a href="https://www.instagram.com/repflow" target="_blank"><img src="images and videos/instaicon.jpg"
+              alt="Instagram"></a>
+          <a href="https://twitter.com/repflow" target="_blank"><img src="images and videos/xicon.jpg"
+              alt="X (Twitter)"></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: #999;">
+      &copy; 2025 RepFlow. Made with 💪 for every rep that counts.
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
